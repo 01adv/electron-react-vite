@@ -1,0 +1,26 @@
+{
+    "appId": "react_electron_tut",
+    "productName": "React Electron Tutorial",
+    "files": [
+        "dist-electron/**/*",
+        "dist-react/**/*"
+    ],
+    "icon": "./desktopIco.png",
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": "AppImage",
+        "category": "Utility"
+    },
+    "win": {
+        "target": [
+            "portable",
+            "msi"
+        ]
+    },
+    "directories": {
+        "buildResources": "assets",
+        "output": "release"
+    }
+}
