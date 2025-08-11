@@ -1,6 +1,9 @@
 {
     "appId": "react_electron_tut",
     "productName": "React Electron Tutorial",
+    "extraResources": [
+        "dist-electron/preload.cjs"
+    ],
     "files": [
         "dist-electron/**/*",
         "dist-react/**/*"
@@ -18,9 +21,5 @@
             "portable",
             "msi"
         ]
-    },
-    "directories": {
-        "buildResources": "assets",
-        "output": "release"
     }
 }
