@@ -6,8 +6,9 @@ clone
 npm i 
 
 development: npm run dev
-production build (based on os): 
-"npm build:win"
+
+** production build (based on os): 
+ "npm build:win"
 "npm build:mac"
 "npm build:linux"
 
