@@ -8,9 +8,13 @@ function App() {
   // window.electron.getStaticData();
 
   useEffect(() => {
-    // @ts-expect-error @ts-ignore 
-    window.electron.subscribeStatistics((stats) => console.log(stats));
+
+    const unsub = window.electron.subscribeStatistics((stats) => console.log(stats));
+
+    return unsub;
   }, [])
+
+
   return (
     <>
       <div>

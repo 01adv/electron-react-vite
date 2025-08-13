@@ -1,9 +1,23 @@
 {
+  // Strict mode is enabled by default in new projects created with the TypeScript CLI (`tsc --init`)
+  // This setting enables all strict type checking options.
+  // https://www.typescriptlang.org/tsconfig#strict
   "compilerOptions": {
     "strict": true,
+    // Target the latest ECMAScript features
+    // https://www.typescriptlang.org/tsconfig#target
     "target": "esnext",
+    // Target the latest Node.js module syntax
+    // https://www.typescriptlang.org/tsconfig#module
     "module": "nodenext",
+    // Output the compiled JavaScript files to the `dist-electron` directory
+    // https://www.typescriptlang.org/tsconfig#outDir
     "outDir": "../../dist-electron",
-    "skipLibCheck": true
+    // Skip type checking of library files (e.g. `node_modules`)
+    // https://www.typescriptlang.org/tsconfig#skipLibCheck
+    "skipLibCheck": true,
+    // Include the `types` directory in type checking
+    // https://www.typescriptlang.org/tsconfig#types
+    "types": ["../../types"]
   }
 }

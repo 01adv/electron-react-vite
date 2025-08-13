@@ -1,8 +1,8 @@
-import { app, BrowserWindow, ipcMain } from "electron";
+import { app, BrowserWindow } from "electron";
 import path from "path";
-import { isDev } from "./utils.js";
-import { getStaticData, pollResource } from "./resourceManager.js";
 import { getPreloadPath } from "./pathResolver.js";
+import { getStaticData, pollResource } from "./resourceManager.js";
+import { ipcMainHandle, isDev } from "./utils.js";
 
 // Called when Electron has finished initializing
 app.on("ready", () => {
@@ -31,7 +31,7 @@ app.on("ready", () => {
   pollResource(mainWindow);
 
   // Handle IPC requests for static data
-  ipcMain.handle("getStaticData", async () => {
+  ipcMainHandle("getStaticData", () => {
     // Return the static data
     return getStaticData();
   });
